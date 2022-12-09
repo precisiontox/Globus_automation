@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH="/home/ubuntu/.local/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
 # PREREQUISITES
 #
@@ -36,7 +37,7 @@ SOURCE_PATH='/~/CDSI/'
 DESTINATION_PATH='/home/ubuntu/sdshd/sd22i001/CDSI/'
 
 # Where the ID of the previous transfer (if exists) is stored
-LAST_TRANSFER_ID_FILE='last-transfer-id-test.txt'
+LAST_TRANSFER_ID_FILE='last-transfer-id.txt'
 
 # Sync options:
 #   exists   Copy files that do not exist at the destination.

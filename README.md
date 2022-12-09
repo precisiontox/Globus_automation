@@ -222,7 +222,11 @@ in the crontab, add following lines:
   # Automatic copy data from UOB Globus endpoint to the Globus endpoint in the heiCloud VM globus-sdshd-ptox
   0,30 * * * *  ~/globus_automation/uob-uhei-sync.sh
 ```
-
+in the beginning of `~/globus_automation/uob-uhei-sync.sh` export the $PATH of the user `ububtu`. 
+To avoid having to type the absolute path to a command, shells introduced the $PATH environment variable, each directory is separated by a : and searches are done from left to right. cron often clears the whole environment, including this $PATH variable. Therefore, the script may behave differently in your cron compared to the behavior in the shell.
+```
+    export PATH="/home/ubuntu/.local/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+```
 Install a post service to enable Cron to send email
 ```
     sudo apt-get install postfix
