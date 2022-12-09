@@ -220,7 +220,7 @@ now set up a chrontab which runs `uob-uhei-sync.sh` periodically.
 in the crontab, add following lines:
 ```shell
   # Automatic copy data from UOB Globus endpoint to the Globus endpoint in the heiCloud VM globus-sdshd-ptox
-  0,30 * * * *  ~/globus_automation/uob-uhei-sync.sh
+  0 0,12 * * *  ~/globus_automation/uob-uhei-sync.sh
 ```
 in the beginning of `~/globus_automation/uob-uhei-sync.sh` export the $PATH of the user `ububtu`. 
 To avoid having to type the absolute path to a command, shells introduced the $PATH environment variable, each directory is separated by a : and searches are done from left to right. cron often clears the whole environment, including this $PATH variable. Therefore, the script may behave differently in your cron compared to the behavior in the shell.
