@@ -1,6 +1,7 @@
 
 # Set up automatic file transfer from UOB Globus endpoint to UHEI Globus endpoint
-
+- The script `uob-uhei-sync.sh` is edited from an example provided by Globus: 
+- https://github.com/globus/automation-examples/blob/master/cli-sync.sh
 ## Current implementation
 ssh to the VM `globus-sdshd-ptox`
 ```shell
